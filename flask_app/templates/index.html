@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='\style.css') }}"
+    />
+    <title>Dojo and Ninjas</title>
+  </head>
+  <body>
+    <h1>New Dojo</h1>
+    <form action="/dojo/create" method="post">
+      <label>name</label>
+      <input type="text" name="name" />
+      <input type="submit" value="create user!" />
+    </form>
+      <h1>All Dojos</h1>
+      <h3>Name</h3>
+      {% for dojo in all_dojos %}
+      <table>
+        <tr>
+          <th></th>
+        </tr>
+        <tr>
+          <th></a></th>
+          <th></th>
+          <a href="/ninjas/view/">{{dojo.name}}</a>
+        </tr>
+      </table>
+      {% endfor %}
+      <br />
+      <a href="/new_ninja">new Ninja</a>
+    
+  </body>
+</html>

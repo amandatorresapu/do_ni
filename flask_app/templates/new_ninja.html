@@ -1,0 +1,24 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='\style.css') }}"
+/>
+<form action="/ninja/create" method="post">
+  <label>Dojo</label>
+  <input type="text" name="dojo_id" />
+  <label>first name</label>
+  <input type="text" name="first_name" />
+  <label>last name</label>
+  <input type="text" name="last_name" />
+  <label>age</label>
+  <input type="number" name="age" />
+  <input type="submit" value="create Ninja!" />
+</form>
+
+<a href="/">Home</a>
